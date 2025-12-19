@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dragon Trainer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Title Section -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto text-center px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Our Group Project</h1>
+        <h2 class="text-xl md:text-2xl mb-4">An Amazing Course Project</h2>
+        <p class="text-lg max-w-2xl mx-auto">This is a short description of our group project. We worked hard to create something innovative and fun.</p>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <img src="https://dummyimage.com/600x400/cccccc/000000&text=Hero+Image+1" alt="Hero Image 1" class="w-full h-auto rounded-lg shadow-lg">
+          <img src="https://dummyimage.com/600x400/cccccc/000000&text=Hero+Image+2" alt="Hero Image 2" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto text-center px-4 sm:px-0">
+        <h2 class="text-3xl font-bold mb-8 px-4">Demo Video</h2>
+        <div class="w-full" style="padding-bottom: 62.5%; position: relative;">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" class="rounded-lg shadow-lg"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Photo Gallery</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <img src="https://dummyimage.com/400x300/cccccc/000000&text=Gallery+1" alt="Gallery 1" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+1')">
+          <img src="https://dummyimage.com/400x300/cccccc/000000&text=Gallery+2" alt="Gallery 2" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+2')">
+          <img src="https://dummyimage.com/400x300/cccccc/000000&text=Gallery+3" alt="Gallery 3" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+3')">
+          <img src="https://dummyimage.com/400x300/cccccc/000000&text=Gallery+4" alt="Gallery 4" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+4')">
+          <img src="https://dummyimage.com/400x300/cccccc/000000&text=Gallery+5" alt="Gallery 5" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+5')">
+          <img src="https://dummyimage.com/400x300/cccccc/000000&text=Gallery+6" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+6')">
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Members -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Project Members</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <img src="https://dummyimage.com/200x200/cccccc/000000&text=Member+1" alt="Member 1" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+            <h3 class="text-xl font-bold">John Doe</h3>
+            <p>Lead Developer</p>
+          </div>
+          <div class="text-center">
+            <img src="https://dummyimage.com/200x200/cccccc/000000&text=Member+2" alt="Member 2" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+            <h3 class="text-xl font-bold">Jane Smith</h3>
+            <p>UI/UX Designer</p>
+          </div>
+          <div class="text-center">
+            <img src="https://dummyimage.com/200x200/cccccc/000000&text=Member+3" alt="Member 3" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+            <h3 class="text-xl font-bold">Bob Johnson</h3>
+            <p>Project Manager</p>
+          </div>
+          <div class="text-center">
+            <img src="https://dummyimage.com/200x200/cccccc/000000&text=Member+4" alt="Member 4" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+            <h3 class="text-xl font-bold">Alice Brown</h3>
+            <p>Backend Developer</p>
+          </div>
+          <div class="text-center">
+            <img src="https://dummyimage.com/200x200/cccccc/000000&text=Member+5" alt="Member 5" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg">
+            <h3 class="text-xl font-bold">Charlie Wilson</h3>
+            <p>QA Tester</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-gray-800 text-white text-center">
+      <p>&copy; 2025 Our Group Project. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Gallery -->
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+      <div class="relative max-w-4xl max-h-full p-4">
+        <img id="modalImg" src="" alt="" class="max-w-full max-h-full rounded-lg">
+        <button onclick="closeModal()" class="absolute top-0 right-0 m-4 text-white text-3xl hover:text-gray-300">&times;</button>
+      </div>
+    </div>
+
+    <script>
+      function openModal(src) {
+        document.getElementById('modalImg').src = src;
+        document.getElementById('modal').classList.remove('hidden');
+      }
+      function closeModal() {
+        document.getElementById('modal').classList.add('hidden');
+      }
+    </script>
+  </body>
+</html>
