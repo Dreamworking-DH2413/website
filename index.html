@@ -21,7 +21,7 @@
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <img src="/res/gallery/IMG_2763.jpg" class="w-full h-auto rounded-lg shadow-lg">
-          <img src="/res/gallery/IMG_5273.jpg" alt="Hero Image 2" class="w-full h-auto rounded-lg shadow-lg">
+          <img src="/res/gallery/IMG_5311.jpg" alt="Hero Image 2" class="w-full h-auto rounded-lg shadow-lg">
         </div>
       </div>
     </section>
@@ -41,12 +41,20 @@
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-8">Photo Gallery</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <img src="/res/gallery/IMG_5303.jpg" alt="Gallery 1" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+1')">
-          <img src="/res/gallery/IMG_5311.jpg" alt="Gallery 2" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+2')">
-          <img src="/res/gallery/IMG_5317.jpg" alt="Gallery 3" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+3')">
-          <img src="/res/gallery/IMG_5372.jpg" alt="Gallery 4" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+4')">
-          <img src="https://dummyimage.com/400x300/cccccc/000000&text=Gallery+5" alt="Gallery 5" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+5')">
-          <img src="https://dummyimage.com/400x300/cccccc/000000&text=Gallery+6" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal('https://dummyimage.com/800x600/cccccc/000000&text=Gallery+6')">
+          <img src="/res/gallery/IMG_5303.jpg" alt="Gallery 1" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/IMG_5317.jpg" alt="Gallery 3" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/RiderModel.png" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/AlvarSuprised.jpg" alt="Gallery 5" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/IMG_5372.jpg" alt="Gallery 4" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/IMG_5273.jpg" alt="Gallery 2" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/DragonSkeleton.png" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/OldDragonModel.png" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/OskarRidingLove.jpg" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/BoardBottom.jpg" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/OskarAndAlvarLivePoster.jpg" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/OskarRidingAlvar.jpg" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/Poster.jpg" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
+          <img src="/res/gallery/TwoComputerSetup.jpg" alt="Gallery 6" class="w-full h-auto cursor-pointer rounded-lg shadow-lg hover:shadow-xl transition-shadow" onclick="openModal(this.src)">
         </div>
       </div>
     </section>
@@ -127,6 +135,11 @@
       function openModal(src) {
         document.getElementById('modalImg').src = src;
         document.getElementById('modal').classList.remove('hidden');
+        document.addEventListener('keydown', (e) => {
+          if (e.key == "Escape") {
+            closeModal();
+          }
+        })
       }
       function closeModal() {
         document.getElementById('modal').classList.add('hidden');
