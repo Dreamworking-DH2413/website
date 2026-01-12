@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dragon Trainer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            maxWidth: {
+              'container': '900px',
+            }
+          },
+          container: {
+            screens: {
+              sm: '640px',
+              md: '768px',
+              lg: '900px',
+              xl: '900px',
+              '2xl': '900px',
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <!-- Title Section -->
-    <section class="py-20 bg-gray-100">
+    <section class="py-10 bg-gray-100">
       <div class="container mx-auto text-center px-4">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Dragon Trainer</h1>
         <h2 class="text-xl md:text-2xl mb-4">How to ride your friend</h2>
@@ -20,7 +40,7 @@
     </section>
 
     <!-- Hero Section -->
-    <section class="py-20">
+    <section class="py-10">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <img src="res/gallery/game.png" alt="Hero Image 1" class="w-full h-auto rounded-lg shadow-lg">
@@ -32,7 +52,7 @@
     </section>
 
     <!-- Overview Section -->
-    <section class="py-20 bg-gray-100">
+    <section class="py-10 bg-gray-100">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold mb-6">Overview</h2>
         <p class="text-lg leading-relaxed mb-8">Dragon Trainer is a co-op VR experience where you and your friend cooperate together as a dragon and its rider to explore a vast landscape, fly through rings, and breathe fire at sheep. Mount our proprietary controller platform and steer the experience together. The dragon controls speed by flapping its wings (your arms) and shoots fire through its mouth. The rider controls pitch with its controller, and together you control the roll by tilting left and right on the platform. By steering and cooperating together, we provide an experience like no other, immersing the players in once-in-a-lifetime fun.</p>
@@ -43,7 +63,7 @@
     </section>
 
     <!-- Video Section -->
-    <section class="py-20 bg-gray-100">
+    <section class="py-10 bg-gray-100">
       <div class="container mx-auto text-center px-4">
         <h2 class="text-3xl font-bold mb-8 px-4">Demo Video</h2>
         <div class="w-full" style="padding-bottom: 62.5%; position: relative;">
@@ -53,13 +73,16 @@
     </section>
 
     <!-- Interaction and Graphics Techniques Section -->
-    <section class="py-20">
+    <section class="py-10">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold mb-6">Interaction and Graphics Techniques</h2>
         <p class="text-lg leading-relaxed mb-4">We decided to use the VIVE headset because of the trackers given and the sensors we could use in the room. This allowed for tracking of the trackers without having them in the player's view. This allowed for tracking of the wings and flapping with the user looking forward, for instance.</p>
         <p class="text-lg leading-relaxed mb-4">The physical part of the project was partly inspired by the Birdly project (see Related Work below), but also from our own imagination. In the last project, we had not experimented too much with the interaction aspect of the project, therefore, we wanted to go wild. The players using Dragon Trainer use their whole bodies to interact with the gameplay, tilting, flapping, steering, and opening/closing their mouths makes it fun and sometimes a little bit challenging. The tilting board is not only to make the experience challenging, but we also hypothesized that actually tilting while tilting in VR could help with the cybersickness that is easily caused when your senses do not match what is happening in virtual reality.</p>
         <p class="text-lg leading-relaxed mb-4">The game world is infinite as every part is procedurally generated. This means new areas are created whenever the player moves, and you will never reach the edge as everything is math. We decided to use procedural terrain generation because a central part of the experience is freedom, and reaching the end of the world breaks that feeling. Since hand-crafting an infinite world is of course not possible, procedural generation was the clear choice. The terrain itself is generated through sampling Perlin Noise, and everything else is added randomly afterwards based on the features of the ground. To hide the trick of creating terrain as the player moves, we also added distance fog, which blends the world with the color of the sky based on how far away something is.</p>
         <p class="text-lg leading-relaxed mb-8">The fire effect was created with the VFX graph in Unity. At first, it was developed based on a couple of papers, with compute shaders and a lot of code, but that quickly got too complicated for the effect we were after and the skillset we had. We therefore created it using Unity's VFX and shader graph tools. This turned out to create a nice effect and did not take too much time to create which gave us time to work on more things. Shader graphs were also used when creating the dissolve effect that gets triggered when sheep are hit by the fire.</p>
+        
+        <img class="border" src="res/gallery/diagram.png" alt="Setup diagram" />
+        <p class="mb-10 text-center">Fig. Setup Diagram</p>
 
         <h2 class="text-3xl font-bold mb-6">Challenges and Obstacles</h2>
         <p class="text-lg leading-relaxed mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi ipsa iste, laboriosam reprehenderit enim saepe tempore veritatis natus at sequi alias quis mollitia fuga, labore ipsam nesciunt, nihil accusantium.</p>
@@ -80,7 +103,7 @@
       </div>
     </section>
     <!-- Photo Gallery -->
-    <section class="py-20">
+    <section class="py-10">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-8">Photo Gallery</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -103,7 +126,7 @@
     </section>
 
     <!-- Project Members -->
-    <section class="py-20 bg-gray-100">
+    <section class="py-10 bg-gray-100">
       <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-8">Project Members</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
