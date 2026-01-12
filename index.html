@@ -31,6 +31,17 @@
       </div>
     </section>
 
+    <!-- Overview Section -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6">Overview</h2>
+        <p class="text-lg leading-relaxed mb-8">Dragon Trainer is a co-op VR experience where you and your friend cooperate together as a dragon and its rider to explore a vast landscape, fly through rings, and breathe fire at sheep. Mount our proprietary controller platform and steer the experience together. The dragon controls speed by flapping its wings (your arms) and shoots fire through its mouth. The rider controls pitch with its controller, and together you control the roll by tilting left and right on the platform. By steering and cooperating together, we provide an experience like no other, immersing the players in once-in-a-lifetime fun.</p>
+        <h2 class="text-3xl font-bold mb-6">Goals and Motivation</h2>
+        <p class="text-lg leading-relaxed mb-4">We had many goals for this project. We wanted to sell (in some sense) the illusion of flying by either having the players feet dangle or by having the platform they were on tilt (we chose the latter since it was better for both players and since mounting something tall on a moving board that someone should sit on while wearing a VR headset could be quite dangerous).</p>
+        <p class="text-lg leading-relaxed">What motivated us to create this experience was partly because it sounded silly but also because it was unique and could create a fun and immersive co-op experience with interesting controls. What also motivated us was that we got to try to develop a VR experience, some of us had experience developing in VR before and some had less to none. We all thought it sounded fun and were all motivated to try different technologies with it, e.g. procedural animation, procedural generation, fire shaders, boids and so much more.</p>
+      </div>
+    </section>
+
     <!-- Video Section -->
     <section class="py-20 bg-gray-100">
       <div class="container mx-auto text-center px-4">
@@ -41,6 +52,33 @@
       </div>
     </section>
 
+    <!-- Interaction and Graphics Techniques Section -->
+    <section class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-6">Interaction and Graphics Techniques</h2>
+        <p class="text-lg leading-relaxed mb-4">We decided to use the VIVE headset because of the trackers given and the sensors we could use in the room. This allowed for tracking of the trackers without having them in the player's view. This allowed for tracking of the wings and flapping with the user looking forward, for instance.</p>
+        <p class="text-lg leading-relaxed mb-4">The physical part of the project was partly inspired by the Birdly project (see Related Work below), but also from our own imagination. In the last project, we had not experimented too much with the interaction aspect of the project, therefore, we wanted to go wild. The players using Dragon Trainer use their whole bodies to interact with the gameplay, tilting, flapping, steering, and opening/closing their mouths makes it fun and sometimes a little bit challenging. The tilting board is not only to make the experience challenging, but we also hypothesized that actually tilting while tilting in VR could help with the cybersickness that is easily caused when your senses do not match what is happening in virtual reality.</p>
+        <p class="text-lg leading-relaxed mb-4">The game world is infinite as every part is procedurally generated. This means new areas are created whenever the player moves, and you will never reach the edge as everything is math. We decided to use procedural terrain generation because a central part of the experience is freedom, and reaching the end of the world breaks that feeling. Since hand-crafting an infinite world is of course not possible, procedural generation was the clear choice. The terrain itself is generated through sampling Perlin Noise, and everything else is added randomly afterwards based on the features of the ground. To hide the trick of creating terrain as the player moves, we also added distance fog, which blends the world with the color of the sky based on how far away something is.</p>
+        <p class="text-lg leading-relaxed mb-8">The fire effect was created with the VFX graph in Unity. At first, it was developed based on a couple of papers, with compute shaders and a lot of code, but that quickly got too complicated for the effect we were after and the skillset we had. We therefore created it using Unity's VFX and shader graph tools. This turned out to create a nice effect and did not take too much time to create which gave us time to work on more things. Shader graphs were also used when creating the dissolve effect that gets triggered when sheep are hit by the fire.</p>
+
+        <h2 class="text-3xl font-bold mb-6">Challenges and Obstacles</h2>
+        <p class="text-lg leading-relaxed mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium commodi ipsa iste, laboriosam reprehenderit enim saepe tempore veritatis natus at sequi alias quis mollitia fuga, labore ipsam nesciunt, nihil accusantium.</p>
+
+        <h2 class="text-3xl font-bold mb-6">Related Work</h2>
+        <h3 class="text-2xl font-semibold mb-3"><a href="https://people.kth.se/~hhofer/hoverbroom/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Hover Broom</a></h3>
+        <p class="text-lg leading-relaxed mb-6">Hover Broom is a AGI project from 2016 that was one of our first inspiration points. We wanted to create a similar experience but with having peoples feet dangle to immerse them even more in the experience. In the end, we steered away from this idea but it was still a good inspiration point in the beginning.</p>
+
+        <h3 class="text-2xl font-semibold mb-3"><a href="https://doi.org/10.48550/arXiv.2503.04217" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Cybersickness</a></h3>
+        <p class="text-lg leading-relaxed mb-6">We looked into cyber sickness and also discussed with our teachers in the course to find a solution for the cyber sickness that could be caused. We looked into papers the e.g. used occlusion of the peripheral when doing large movements in VR in order to reduce cybersickness. Even though we did not implement this solution, papers like this helped us think of good solutions while developing the project.</p>
+
+        <h3 class="text-2xl font-semibold mb-3"><a href="https://birdlyvr.com//" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700">Birdly</a></h3>
+        <p class="text-lg leading-relaxed mb-8">When we were ideating for the project we had many ideas, "What if we hang someone from the ceiling? What if we have their feet dangling on high bar chairs? Can we make a platform tilt by laying a board on an inflatable mattress?". The last question is almost the final product and we got some of the inspiration from the Birdly project that immerses their players in a flying VR experience on a moving platform.</p>
+
+        <h2 class="text-3xl font-bold mb-6">Lessons Learned</h2>
+        <p class="text-lg leading-relaxed mb-4">One big lesson that we learned during this project was that there is a lot of tweaking and testing that goes into making the VR experience fun but also not cybersickness-inducing. We put a lot of time into testing and tweaking the controls, making them realistic, not too fast but also smooth and fun. We learned that cyber sickness is often going to be a problem but the experience impacts it heavily. There is also big differences depending on the users experience with virtual reality in how sick they become.</p>
+        <p class="text-lg leading-relaxed">Another lesson we learned during the project was that there is a lot of work syncing and managing network objects. We had problems with high fps, weird connection problems and a lot of fun bugs. When we had new functionality, such as boids behaviour on sheep it was not done since we had to sync it through three instances of the project (dragon, rider and spectator).</p>
+      </div>
+    </section>
     <!-- Photo Gallery -->
     <section class="py-20">
       <div class="container mx-auto px-4">
