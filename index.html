@@ -194,8 +194,8 @@
     </footer>
 
     <!-- Modal for Gallery -->
-    <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
-      <div class="relative max-w-4xl max-h-full p-4">
+    <div id="modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center hidden z-50" onclick="closeModal()">
+      <div class="relative max-w-4xl max-h-full p-4" onclick="event.stopPropagation()">
         <img id="modalImg" src="" alt="" class="max-w-full max-h-full rounded-lg">
         <button onclick="closeModal()" class="absolute top-0 right-0 m-4 text-white text-3xl hover:text-gray-300">&times;</button>
       </div>
